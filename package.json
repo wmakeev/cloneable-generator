@@ -1,0 +1,30 @@
+{
+  "name": "@wmakeev/cloneable-generator",
+  "version": "1.0.0",
+  "description": "Cloneable generator from @saga/testing-utils",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepublish": "npm run test",
+    "test": "node index.test.js"
+  },
+  "keywords": [
+    "saga",
+    "generator",
+    "cloneable",
+    "clone",
+    "test",
+    "utils"
+  ],
+  "author": "Vitaliy V. Makeev",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.11.0"
+  }
+}
