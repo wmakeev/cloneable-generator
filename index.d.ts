@@ -1,3 +1,5 @@
+export type GeneratorFunc<Args extends any[] = any[]> = (...args: Args) => IterableIterator<any>
+
 /**
  * Takes a generator function (function*) and returns a generator function.
  * All generators instanciated from this function will be cloneable.
@@ -91,9 +93,9 @@
  *      assert.end();
  *    });
  */
-export function cloneableGenerator<T> (iterator: IterableIterator<T>): (...args: Parameters) => IteratorClone<T>
+export function cloneableGenerator<T extends GeneratorFunc> (iterator: T): (...args: Parameters<T>) => IteratorClone
 
-export interface IteratorClone<T> extends IterableIterator<T> {
-  clone: () => IteratorClone<T>
+export interface IteratorClone extends IterableIterator<any> {
+  clone: () => IteratorClone
 }
 

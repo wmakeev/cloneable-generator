@@ -1,6 +1,6 @@
 {
   "name": "@wmakeev/cloneable-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cloneable generator from @saga/testing-utils",
   "main": "index.js",
   "types": "index.d.ts",
